@@ -1,0 +1,493 @@
+:root {
+    --primary-color: #1c2143;
+    --text-color: #333;
+    --light-bg: #f5f5f5;
+    --content-max: 1120px;
+    --gutter: clamp(1.25rem, 3.5vw, 3.25rem);
+    --link-color: #4686c8;
+    --heading-color: #09427d;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: #f7f8fb;
+}
+
+a {
+    color: var(--link-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--heading-color);
+}
+
+header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav {
+    margin: 20px 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 10px 0;
+}
+
+footer {
+    background: #1c2143;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: var(--content-max);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--gutter);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.nav-menu a:hover {
+    opacity: 0.8;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #1c2143;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 18px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    box-shadow: 0 6px 12px rgba(28, 33, 67, 0.2);
+}
+
+.social-icons a:hover {
+    filter: brightness(0.95);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 18px rgba(28, 33, 67, 0.25);
+}
+
+.social-icons a:focus-visible {
+    outline: 2px solid #1c2143;
+    outline-offset: 3px;
+}
+
+.social-icons a.linkedin {
+    background-color: #0a66c2;
+}
+
+.social-icons a.scholar {
+    background-color: #4285f4;
+}
+
+.social-icons a.orcid {
+    background-color: #a6ce39;
+    color: #1b1b1b;
+}
+
+.social-icons a.researchgate {
+    background-color: #00ccbb;
+    color: #0b1a1a;
+}
+
+.social-icons a.github {
+    background-color: #24292f;
+}
+
+.container {
+    max-width: var(--content-max);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+}
+
+.wide-margins {
+    padding-left: clamp(1.75rem, 5vw, 4.5rem);
+    padding-right: clamp(1.75rem, 5vw, 4.5rem);
+}
+
+.section {
+    margin: 0.35rem 0 1.1rem;
+}
+
+.about-content {
+    background: #fff;
+    border-radius: 18px;
+    padding: clamp(1.2rem, 2.5vw, 2.2rem);
+    padding-top: 0.9rem;
+    box-shadow: 0 18px 40px rgba(28, 33, 67, 0.08);
+}
+
+.about-section {
+    display: flex;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.research-content {
+    display: block;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.research-content h1 {
+    font-size: 2.25rem;
+    letter-spacing: 0.01em;
+    margin-bottom: 0.75rem;
+}
+
+.research-content h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    position: relative;
+}
+
+.research-content h2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 0.6rem 0 0;
+    border-radius: 999px;
+}
+
+.full-underline::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 0.6rem 0 0;
+    border-radius: 999px;
+}
+
+.course {
+    border-left: 3px solid rgba(9, 66, 125, 0.35);
+    padding-left: 1.2rem;
+    margin: 1.25rem 0;
+}
+
+.course h3 {
+    color: #09427d;
+    margin-bottom: 0.35rem;
+}
+
+.course-details {
+    padding-left: 0.6rem;
+}
+
+.course-details h4 {
+    color: #09427d;
+    margin: 0.35rem 0 0.4rem;
+}
+
+.course-eval {
+    color: #0f6ab8;
+    margin: 0.2rem 0 0.4rem;
+}
+
+.course-period {
+    color: #5a6b7a;
+    font-style: italic;
+    margin: 0 0 0.6rem;
+}
+
+.cv-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.cv-content h1 {
+    margin: 0.2rem 0 0.4rem;
+}
+
+.cv-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem 1rem;
+    border: 1px solid #09427d;
+    border-radius: 10px;
+    color: #fff;
+    text-decoration: none;
+    background: #09427d;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cv-download i {
+    font-size: 1rem;
+    color: #09427d;
+}
+
+.cv-download:hover {
+    border-color: rgba(9, 66, 125, 0.6);
+    box-shadow: 0 8px 18px rgba(9, 66, 125, 0.15);
+    transform: translateY(-1px);
+}
+
+.cv-viewer {
+    width: 100%;
+    max-width: 900px;
+    height: 800px;
+    border: 1px solid rgba(9, 66, 125, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.cv-viewer iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.research-content h3 {
+    font-size: 1.15rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #4b4f6b;
+}
+
+.research-content ul {
+    margin: 0.75rem 0 1.5rem;
+    padding-left: 1.1rem;
+}
+
+.research-content li {
+    margin-bottom: 0.9rem;
+    line-height: 1.6;
+}
+
+.research-content li strong {
+    font-weight: 700;
+}
+
+.research-content a {
+    color: #1c2143;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(28, 33, 67, 0.25);
+}
+
+.research-content a:hover {
+    border-bottom-color: rgba(28, 33, 67, 0.65);
+}
+
+.research-content a:focus-visible {
+    outline: 2px solid #1c2143;
+    outline-offset: 3px;
+}
+
+.about-photo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 4rem;
+}
+
+.center-headers h1,
+.center-headers h2 {
+    text-align: center;
+}
+
+.center-headers p {
+    text-align: center;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.center-text ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.skills-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+#skills h2 {
+    text-align: center;
+}
+
+.skills-full {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 0.2rem;
+    padding-top: 0.4rem;
+    border-top: 1px solid rgba(9, 66, 125, 0.12);
+}
+
+.skills-full .skills-container {
+    justify-content: center;
+}
+
+.skill-item {
+    text-align: center;
+    min-width: 110px;
+}
+
+.skill-item p {
+    margin-top: 0.75rem;
+}
+
+.skill-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.75rem;
+    box-shadow: 0 10px 20px rgba(28, 33, 67, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-item:hover .skill-icon {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 24px rgba(28, 33, 67, 0.2);
+}
+
+.skill-icon.latex {
+    background: linear-gradient(135deg, #0a8f87, #0f5c56);
+}
+
+.skill-icon.python {
+    background: linear-gradient(135deg, #3776ab, #2b5b84);
+}
+
+.skill-icon.rstudio {
+    background: linear-gradient(135deg, #276dc3, #1f4e94);
+}
+
+.skill-icon.matlab {
+    background: linear-gradient(135deg, #ef6723, #c75016);
+}
+
+.skill-icon.stata {
+    background: linear-gradient(135deg, #003d80, #0b2c57);
+}
+
+.skill-icon.vscode {
+    background: linear-gradient(135deg, #007acc, #005a9e);
+}
+
+.latex-mark {
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 0.02em;
+}
+
+.latex-mark span {
+    position: relative;
+    left: -0.32em;
+    top: 0.32em;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+}
