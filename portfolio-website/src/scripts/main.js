@@ -3,8 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     navLinks.forEach(link => {
         link.addEventListener('click', (event) => {
+            const href = link.getAttribute('href');
+            if (!href || !href.startsWith('#') || href.length === 1) {
+                return;
+            }
             event.preventDefault();
-            const targetId = link.getAttribute('href').substring(1);
+            const targetId = href.substring(1);
             const targetSection = document.getElementById(targetId);
 
             if (targetSection) {
