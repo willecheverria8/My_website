@@ -435,33 +435,26 @@ footer {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.skill-icon img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    display: block;
+}
+
 .skill-item:hover .skill-icon {
     transform: translateY(-3px);
     box-shadow: 0 14px 24px rgba(28, 33, 67, 0.2);
 }
 
-.skill-icon.latex {
-    background: linear-gradient(135deg, #0a8f87, #0f5c56);
-}
-
-.skill-icon.python {
-    background: linear-gradient(135deg, #3776ab, #2b5b84);
-}
-
-.skill-icon.rstudio {
-    background: linear-gradient(135deg, #276dc3, #1f4e94);
-}
-
-.skill-icon.matlab {
-    background: linear-gradient(135deg, #ef6723, #c75016);
-}
-
-.skill-icon.stata {
-    background: linear-gradient(135deg, #003d80, #0b2c57);
-}
-
+.skill-icon.latex,
+.skill-icon.python,
+.skill-icon.rstudio,
+.skill-icon.matlab,
+.skill-icon.stata,
 .skill-icon.vscode {
-    background: linear-gradient(135deg, #007acc, #005a9e);
+    background: #ffffff;
+    border: 1px solid rgba(28, 33, 67, 0.12);
 }
 
 .latex-mark {
