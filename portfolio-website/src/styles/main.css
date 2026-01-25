@@ -8,6 +8,12 @@
     --heading-color: #09427d;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -87,11 +93,14 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 0 var(--gutter);
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
 }
 
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
+    line-height: 1.2;
 }
 
 .nav-menu {
@@ -100,6 +109,7 @@ footer {
     gap: 2rem;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap;
 }
 
 .nav-menu a {
@@ -470,17 +480,85 @@ footer {
     top: 0.32em;
 }
 
+@media (max-width: 1024px) {
+    .about-content {
+        grid-template-columns: 220px 1fr;
+        gap: 2rem;
+    }
+
+    .cv-viewer {
+        height: 640px;
+    }
+}
+
 @media (max-width: 768px) {
     header h1 {
         font-size: 2em;
     }
 
-    nav a {
-        display: block;
-        margin: 10px 0;
+    .navbar {
+        position: static;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-menu {
+        gap: 0.75rem 1.25rem;
+        padding-top: 0.5rem;
     }
 
     .about-content {
         grid-template-columns: 1fr;
+    }
+
+    .about-photo img {
+        margin-top: 0.75rem;
+        max-width: 220px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .skills-container {
+        gap: 1.25rem;
+    }
+
+    .skill-item {
+        min-width: 96px;
+    }
+
+    .cv-viewer {
+        height: 520px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.25rem;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .about-photo img {
+        max-width: 180px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .cv-download {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cv-viewer {
+        height: 420px;
     }
 }
